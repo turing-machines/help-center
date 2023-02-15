@@ -1,0 +1,1 @@
+<p>We import Kickstarter orders into our e-commerce system and once your order is imported, you will need to complete it. Completed orders will have a "Processing" status. During the completion process, you will also have the option to add any additional add-ons.</p>

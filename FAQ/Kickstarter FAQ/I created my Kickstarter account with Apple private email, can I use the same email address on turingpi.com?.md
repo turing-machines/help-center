@@ -1,0 +1,1 @@
+<p>You can't use the same email address on turingpi.com or Kickstarter because Apple generates unique emails for each website. Please open a ticket and provide us with the email address that you want to use with your profile and we will update the email address for your order. Thank you.</p>
