@@ -1,4 +1,4 @@
-<h1>What is it ?</h1>
+<h1>What is it??</h1>
 <p><strong>Note:</strong> some users reported that the RTC battery may restart or interfere with starting the BMC. We are investigating it at the moment. </p>
 <p>BMC, or Baseboard Management Controller, is a specialized microcontroller that is built into the motherboard of a computer or server. It is responsible for monitoring the system's hardware and providing remote management capabilities, such as power control or temperature monitoring.</p>
 <p>Our Turing Pi V2 board is equipped with an Allwinner T113-S3, which provides BMC functionality. This is essentially a mini-computer built into the motherboard. It is equipped with features you would expect from a PC such as a dual-core processor, RAM, and a hard drive, albeit in limited capacity. The best part is that it runs on <span class="wysiwyg-color-green110"><strong>Linux OS</strong></span>, yes, really!</p>
