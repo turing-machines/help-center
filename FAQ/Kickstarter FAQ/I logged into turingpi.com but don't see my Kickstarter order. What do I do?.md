@@ -1,0 +1,1 @@
+<p>Don't worry! Since we import orders in batches, it may take some time. Check the latest backer numbers on Kickstarter for project updates to get an idea of when yours will be imported.</p>

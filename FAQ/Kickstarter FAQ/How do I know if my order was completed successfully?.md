@@ -1,0 +1,1 @@
+<p>If your order status is "On-hold", it means you need to complete your order. If it is "Processing", it means your order has been completed successfully.</p>

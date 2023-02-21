@@ -1,0 +1,2 @@
+<p>Shipping was not included in the Kickstarter pledge as this was mentioned multiple times on the Kickstarter project page. </p>
+<p><img src="https://cdn.discordapp.com/attachments/754950670175436848/1058100236779782256/download.png"></p>

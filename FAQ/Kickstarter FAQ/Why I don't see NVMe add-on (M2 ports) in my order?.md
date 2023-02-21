@@ -1,0 +1,1 @@
+<p>All Turing Pi 2 devices sold on our website come with 4x M2 ports by default and it is already included in the price, so we do not list it as a separate add-on to avoid confusion for new customers. If you paid for the NVMe option on Kickstarter or using Typeform, please be assured that you will receive your device with M2 ports installed.  </p>

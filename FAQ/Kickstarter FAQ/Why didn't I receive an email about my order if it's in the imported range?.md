@@ -1,0 +1,1 @@
+<p>If you already have a turingpi.com account, you will not receive an email about your order. You can access your order by going to the <a href="https://turingpi.com/my-account/orders/" target="_blank" rel="noopener">My account &gt; Orders</a> page.</p>

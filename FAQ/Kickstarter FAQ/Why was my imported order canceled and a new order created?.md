@@ -1,0 +1,1 @@
+<p>This is normal when completing your Kickstarter order. Orders with On-hold status will be canceled and a new order with Processing status will be created.</p>
