@@ -1,4 +1,4 @@
-<p>Turing Pi V2 Board contains four vertical 260-pin SO-DIMM sockets. This allows us to support not only the Raspberry Pi compute Module (with CM4 Adapter Board), directly attachable Nvidia Jetson compute Modules, but also our upcoming Turing Pi compute module.</p>
+<p>Turing Pi V2 Board contains four vertical 260-pin SO-DIMM sockets. This allows us to support not only the Raspberry Pi compute Module (with CM4 Adapter Board), directly attachable Nvidia Jetson compute Modules, but also our upcoming Turing Pi compute module!</p>
 <p><strong>You are <span class="wysiwyg-color-green120">not</span> limited to using only one model for every slot</strong>, or even one vendor. Feel free to mix the Compute Modules however you like.</p>
 <p>You may want an all-purpose Kubernetes cluster made out of 4 Raspberry Pi modules, but you can replace one or more RPI modules with Nvidia Jetson and suddenly your cluster has Machine Learning capable nodes.</p>
 <p> </p>
