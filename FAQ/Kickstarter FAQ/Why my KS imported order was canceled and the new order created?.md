@@ -1,0 +1,1 @@
+<p class="p1">The Kickstarter imported order status always changes from "On Hold" to "Processing" during editing. As part of this process, the old order number should be automatically canceled, and a new order should be automatically created to reflect the updated information. This ensures that the order is accurate and up-to-date. </p>
