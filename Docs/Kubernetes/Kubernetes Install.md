@@ -13,7 +13,7 @@
 <strong>Node4</strong> - 10.0.0.63 - Kubernetes worker node</li>
 </ul>
 <h2>Initializing Master Node</h2>
-<pre>curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644 --disable servicelb --token myrandompassword --bind-address 10.0.0.60 --disable-cloud-controller --disable local-storage</pre>
+<pre>curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644 --disable servicelb --token myrandompassword --node-ip 10.0.0.60 --disable-cloud-controller --disable local-storage</pre>
 <p><strong>Some explanations:</strong></p>
 <ul>
 <li>
@@ -22,7 +22,7 @@
 <li>
 <strong>--token</strong> - This flag sets the token used to connect to the K3s master node. Choose a secure random password and keep it safe.</li>
 <li>
-<strong>--bind-address</strong> - This flag sets the K3s master node to bind to a specific IP address.</li>
+<strong>--node-ip</strong> - This flag sets the K3s master node to bind to a specific IP address.</li>
 <li>
 <strong>--disable-cloud-controller</strong> - This flag disables the K3s cloud controller, which we deemed unnecessary in our use case.</li>
 <li>
