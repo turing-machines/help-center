@@ -109,3 +109,28 @@
 <p>By default, the device is in the <span class="wysiwyg-color-orange">15W</span> power mode - change it to <span class="wysiwyg-color-orange">MAXN</span> using the setting in the top-right part of the screen.:</p>
 <p class="wysiwyg-text-align-center"><img src="https://help.turingpi.com/hc/article_attachments/9768912004509" alt="MAXN.png"></p>
 <p> </p>
+<h2>The Jetpack</h2>
+<p>As mentioned before, this (currently the only) way of installation does not provide the Jetpack. It's time to install it.</p>
+<p>To install Jetpack, let's first update the operating system:</p>
+<pre>sudo apt update<br>sudo apt -y upgrade<br>sudo apt -y dist-upgrade<br>sudo reboot</pre>
+<p>And install the Jetpack:</p>
+<pre>sudo apt -y install nvidia-jetpack</pre>
+<p> </p>
+<h1>Testing</h1>
+<p>This section is optional, it shows how to test the module under full CPU and GPU load.</p>
+<pre>We'll be using TensorFlow to put the load on the GPU:<br>sudo apt -y install libhdf5-serial-dev hdf5-tools libhdf5-dev zlib1g-dev zip libjpeg8-dev liblapack-dev libblas-dev gfortran<br>sudo apt -y install python3-pip<br>sudo pip3 install -U pip testresources setuptools<br>sudo pip3 install -U numpy==1.21.1 future==0.18.2 mock==3.0.5 keras_preprocessing==1.1.2 keras_applications==1.0.8 gast==0.4.0 protobuf pybind11 cython pkgconfig packaging h5py==3.6.0<br>sudo pip3 install --extra-index-url https://developer.download.nvidia.com/compute/redist/jp/v51 tensorflow==2.11.0+nv23.01</pre>
+<p>To put some load on the CPU we'll use <span class="wysiwyg-color-orange">stress</span>:</p>
+<pre>sudo apt -y install stress</pre>
+<p>Reboot:</p>
+<pre>sudo reboot</pre>
+<p>Now we can open Jetson Power GUI - it can be found in the upper-right corner when we click on the power profile, below the power mode setting</p>
+<p>Additionally, open 2 terminal windows.</p>
+<p>Save this Python code into the <span class="wysiwyg-color-orange">test.py</span> file - this is a neural network that does really nothing useful (computes some noise), but puts a load on the GPU:</p>
+<pre>import os<br>import time<br>import subprocess<br>from threading import Thread<br>import tensorflow as tf<br>from tensorflow.keras import optimizers, layers, models<br>import numpy as np<br><br><br>BATCH_SIZE = 4<br>HIDDEN_LAYERS = 2<br>HIDDEN_LAYER_KERNELS = 4<br>DATASET_SIZE = 2048<br>DATA_SHAPE = (256, 256, 3)<br><br>model = models.Sequential()<br>model.add(layers.Conv2D(HIDDEN_LAYER_KERNELS, (3, 3), activation='relu', input_shape=DATA_SHAPE, strides=(1, 1), padding="same"))<br>model.add(layers.MaxPooling2D((2, 2), strides=(1, 1), padding="same"))<br>for _ in range(HIDDEN_LAYERS):<br>model.add(layers.Conv2D(HIDDEN_LAYER_KERNELS, (5, 5), activation='relu', strides=(1, 1), padding="same"))<br>model.add(layers.MaxPooling2D((5, 5), strides=(1, 1), padding="same"))<br><br>model.add(layers.Conv2D(2, (DATA_SHAPE[0] // 8, DATA_SHAPE[1] // 8), activation='relu'))<br>model.add(layers.Flatten())<br>model.add(layers.Dense(64, activation='relu'))<br>model.add(layers.Dense(10))<br><br>model.summary()<br><br>X = np.ones((DATASET_SIZE, *DATA_SHAPE))<br>y = np.ones((DATASET_SIZE, 10))<br>data = tf.data.Dataset.from_tensor_slices((X, y))<br>data = data.batch(BATCH_SIZE)<br><br>model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=1e-3),<br>loss=tf.keras.losses.BinaryCrossentropy())<br><br>model.fit(data, epochs=1000)</pre>
+<p>In one terminal window run:</p>
+<pre>stress -c 8</pre>
+<p>to stress the CPU, and in another tun:</p>
+<pre>python3.8 test.py</pre>
+<p>to stress the GPU at the same time. At this stage, the Orin NX might start showing over-current messages which means we are an amount of load beyond what it can handle.</p>
+<p><img src="https://help.turingpi.com/hc/article_attachments/9769222860573" alt="Screenshot_from_2023-03-10_12-34-52.png"></p>
+<p> </p>
