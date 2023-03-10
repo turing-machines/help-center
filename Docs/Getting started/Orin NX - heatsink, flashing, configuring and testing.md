@@ -91,5 +91,21 @@
 <p>These steps can be done using SSH - one of the steps asked for a hostname - if your PC/Mac has the mDNS running, you can use this name directly to connect to it via SSH, otherwise you need to find and use the IP address.</p>
 <p> </p>
 <h1>Configuration</h1>
-<h2>Configuring the FAN Profile</h2>
+<h2>The FAN Profile</h2>
+<p>First, we need <span class="wysiwyg-color-orange">nano</span> or any other editor of choice:</p>
+<pre>sudo apt install -y nano</pre>
+<p>Then, to change the FAN profile, invoke:</p>
+<pre>sudo systemctl stop nvfancontrol<br>sudo nano /etc/nvfancontrol.conf</pre>
+<p>Find the line containing `FAN_DEFAULT_PROFILE` - near the bottom of the file content:</p>
+<pre>FAN_DEFAULT_PROFILE quiet</pre>
+<p>And replace quiet with cool:</p>
+<pre>FAN_DEFAULT_PROFILE cool</pre>
+<p>Press F3 and F2 to save and exit:</p>
+<p class="wysiwyg-text-align-center"><img src="https://help.turingpi.com/hc/article_attachments/9768624989341" alt="Profile.png"></p>
+<p>Run:</p>
+<pre>sudo rm /var/lib/nvfancontrol/status<br>sudo systemctl start nvfancontrol</pre>
+<p> </p>
+<h2>The Power Mode</h2>
+<p>By default, the device is in the <span class="wysiwyg-color-orange">15W</span> power mode - change it to <span class="wysiwyg-color-orange">MAXN</span> using the setting in the top-right part of the screen.:</p>
+<p class="wysiwyg-text-align-center"><img src="https://help.turingpi.com/hc/article_attachments/9768912004509" alt="MAXN.png"></p>
 <p> </p>
