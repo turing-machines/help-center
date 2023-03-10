@@ -15,7 +15,7 @@
 <p class="wysiwyg-text-align-left">I tested flashing with bare-metal Ubuntu 20.04 LTS. As far as I know, using WSL on Windows or WMWare Player (free) with Ubuntu 20.04 LTS should also work. If you tested such a solution, let us know!</p>
 <p class="wysiwyg-text-align-left">The installation process also assumes flashing in Node 2 since some users experienced difficulties in flashing in Node 1.</p>
 <p class="wysiwyg-text-align-left"> </p>
-<h2 class="wysiwyg-text-align-left">PC preparation</h2>
+<h2 class="wysiwyg-text-align-left">PC Preparation</h2>
 <p class="wysiwyg-text-align-left">Install Ubuntu 20.04 LTS (this exact version, not 22.04 LTS or any other) on a PC.</p>
 <p class="wysiwyg-text-align-left">Currently, SDK Manager does not support Orin devices, so we have to flash them "by hand". In the future, the whole process should be simpler, but for now, this is what we have to do.</p>
 <p class="wysiwyg-text-align-left">Install required libraries:</p>
@@ -27,4 +27,40 @@
 <p class="wysiwyg-text-align-left">For example, for <span class="wysiwyg-color-orange">Jetson Linux 35.2.1</span> the links are:<br>- <span class="wysiwyg-color-orange">Driver Package (BSP)</span>: <a href="https://developer.nvidia.com/downloads/jetson-linux-r3521-aarch64tbz2" target="_self">https://developer.nvidia.com/downloads/jetson-linux-r3521-aarch64tbz2</a><br>- <span class="wysiwyg-color-orange">Sample Root Filesystem</span>: <a href="https://developer.nvidia.com/downloads/linux-sample-root-filesystem-r3521aarch64tbz2" target="_self">https://developer.nvidia.com/downloads/linux-sample-root-filesystem-r3521aarch64tbz2</a></p>
 <p>Download both files to, for example, the home directory - with the above URL example:</p>
 <pre>wget <a href="https://developer.nvidia.com/downloads/jetson-linux-r3521-aarch64tbz2">https://developer.nvidia.com/downloads/jetson-linux-r3521-aarch64tbz2</a><br>wget <a href="https://developer.nvidia.com/downloads/linux-sample-root-filesystem-r3521aarch64tbz2">https://developer.nvidia.com/downloads/linux-sample-root-filesystem-r3521aarch64tbz2</a></pre>
+<p>Unpack the Driver Package (BSP) (again, using names from the example URLs above):</p>
+<pre>tar xpf jetson-linux-r3521-aarch64tbz2</pre>
+<p>Unpack the Sample Root Filesystem into the Driver Package (BSP) (<span class="wysiwyg-color-orange">sudo</span> is important here):</p>
+<pre>sudo tar xpf linux-sample-root-filesystem-r3521aarch64tbz2 -C Linux_for_Tegra/rootfs/</pre>
+<p>Turing Pi 2 (similar to some other custom carrier boards) does not have the onboard EEPROM that the module or the flasher can access. The flasher, however, expects the EEPROM to exist as it does on the official Xavier NX carrier boards. We need to modify one file to set the EEPROM size to <span class="wysiwyg-color-orange">0</span>.</p>
+<pre>sudo nano Linux_for_Tegra/bootloader/t186ref/BCT/tegra234-mb2-bct-misc-p3767-0000.dts</pre>
+<p>The last EEPROM configuration line says:</p>
+<pre>cvb_eeprom_read_size = &lt;0x100&gt;;</pre>
+<p>Replace the value of <span class="wysiwyg-color-orange">0x100</span> with <span class="wysiwyg-color-orange">0x0</span> (make sure to not modify <span class="wysiwyg-color-orange">cvm_eeprom_read_size</span> instead - the name is similar, but starts with <span class="wysiwyg-color-orange">cvm</span>, modify the one whose name starts with <span class="wysiwyg-color-orange90">cvb</span> - <span class="wysiwyg-color-orange">b</span> like a board):</p>
+<pre>cvb_eeprom_read_size = &lt;0x0&gt;;</pre>
+<p>Press F3 and F2 to save and exit:</p>
+<p class="wysiwyg-text-align-center"><img src="https://help.turingpi.com/hc/article_attachments/9767790966557" alt="Eeprom.png"></p>
+<p>Prepare the firmware:</p>
+<pre>cd Linux_for_Tegra/<br>sudo ./apply_binaries.sh<br>sudo ./tools/l4t_flash_prerequisites.sh</pre>
+<p> </p>
+<h2>Turing Pi 2 Preparation</h2>
+<p>Insert Orin NX into Node 2 and install the NVMe drive for Node 2 (I don't yet know if that'll work with the USB drive on Turing Pi 2 - you could, in theory, use Mini PCIe to SATA controller but the bootloader would have to support it and I did not test this possibility, yet - if you happened to test this configuration, please let us know!).</p>
+<p>Now, let's put the Orin NX device into the <span class="wysiwyg-color-orange">Forced Recovery Mode</span> using the web panel:</p>
+<ul>
+<li>turn the Node 2 power off</li>
+<li>set Node 2 into the device mode</li>
+<li>turn the Node 2 power on</li>
+</ul>
+<p>You can also use the command line version:</p>
+<ul>
+<li>
+<span class="wysiwyg-color-orange">tpi -p on</span> (turns on all nodes)</li>
+<li><span class="wysiwyg-color-orange">tpi -u device -n 2</span></li>
+<li>
+<span class="wysiwyg-color-orange">tpi -p off</span> (turns off all nodes)</li>
+</ul>
+<p>Connect the USB A-A cable to the PC and verify that the Orin NX device has been detected by invoking <span class="wysiwyg-color-orange">lsusb</span>. It should pop up as the <span class="wysiwyg-color-orange">Nvidia Corp. APX</span> device on the list:</p>
+<p class="wysiwyg-text-align-center"><img src="https://help.turingpi.com/hc/article_attachments/9768031241245" alt="APX.png"></p>
+<p> </p>
+<h2>Flashing</h2>
+<p> </p>
 <p> </p>
