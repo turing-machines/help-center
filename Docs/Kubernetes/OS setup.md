@@ -1,7 +1,7 @@
 <p>While the choice of operating system for a Kubernetes setup is not crucial from a Kubernetes perspective, the correct choice of OS can greatly simplify post-install tasks.</p>
 <p>For this Kubernetes setup, we have chosen DietPi as our operating system. For its ease of setup and availability of automatic bootstrap options, enabling quick and effortless preparation of the nodes.</p>
 <p>You can download the DietPi ISO image <strong><a href="https://dietpi.com/#downloadinfo" target="_blank" rel="noopener noreferrer">HERE</a></strong>. <strong>Choose the Raspberry Pi 2/3/4</strong> version.</p>
-<p>To flash the ISO onto the Raspberry Pi CM4 module, you need to use your preferred operating system and follow the guide provided (<a href="https://help.turingpi.com/hc/en-us/articles/8687165986205" target="_blank" rel="noopener noreferrer">see guide link</a>). If you are using CM4 modules with SD card, you may use an SD card reader.</p>
+<p>To flash the ISO onto the Raspberry Pi CM4 module, you need to use your preferred operating system and follow the guide provided (<a href="https://help.turingpi.com/hc/en-us/articles/8687165986205" target="_blank" rel="noopener noreferrer">see guide link</a>). If you are using CM4 modules with microSD card, you may use an microSD card reader.</p>
 <p>Instead of choosing one of the images option in <strong>Raspberry Pi Imager</strong>, scroll down and choose "<strong>Use custom</strong>".</p>
 <p class="wysiwyg-text-align-center"><img src="https://help.turingpi.com/hc/article_attachments/9042999711261" alt="use_custom.png"></p>
 <p class="wysiwyg-text-align-left">And choose the downloaded DietPi image.</p>
@@ -64,7 +64,7 @@
 <pre>group_enable=cpuset cgroup_enable=memory cgroup_memory=1</pre>
 <p>These variables ensure container software will work properly.</p>
 <h1>Boot Up</h1>
-<p>To get started, insert a SD card in the Raspberry Pi 4 (or switch to normal mode if using internal storage) and power it up. Wait a few minutes and keep an eye on your router for a new IP address to appear. It may take some time as the system is performing several tasks. If you have a monitor and keyboard available, you can observe the installation progress.</p>
+<p>To get started, insert a microSD card in the Raspberry Pi 4 (or switch to normal mode if using internal storage) and power it up. Wait a few minutes and keep an eye on your router for a new IP address to appear. It may take some time as the system is performing several tasks. If you have a monitor and keyboard available, you can observe the installation progress.</p>
 <p>We hope that you will be able to successfully SSH into the new IPs using the<strong> login credentials: username: root and password: dietpi.</strong></p>
 <p>In our case, the nodes were set up to be on:</p>
 <ul>

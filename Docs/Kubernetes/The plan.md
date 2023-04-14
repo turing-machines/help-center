@@ -20,7 +20,7 @@
 <li><a href="https://longhorn.io/docs" target="_blank" rel="noopener noreferrer">Longhorn</a></li>
 <li><a href="https://github.com/kubernetes-csi/csi-driver-nfs" target="_blank" rel="noopener noreferrer">NFS plugin</a></li>
 </ul>
-<p>While there are other storage options available, these two have proven to be effective solutions. Longhorn requires a minimum of 3 nodes with hard drives in order to establish a storage pool. Using the SD card on Raspberry Pi is not recommended for this purpose (although possible). Instead, we can utilize the onboard SATA connectors and two mini PCIe slots to achieve 3 nodes with SATA SSDs for proper storage. You can find mini PCIe to SATA converters on websites such as AliExpress.</p>
+<p>While there are other storage options available, these two have proven to be effective solutions. Longhorn requires a minimum of 3 nodes with hard drives in order to establish a storage pool. Using the microSD card on Raspberry Pi is not recommended for this purpose (although possible). Instead, we can utilize the onboard SATA connectors and two mini PCIe slots to achieve 3 nodes with SATA SSDs for proper storage. You can find mini PCIe to SATA converters on websites such as AliExpress.</p>
 <p class="wysiwyg-text-align-center"><img src="https://help.turingpi.com/hc/article_attachments/9041211276061" alt="minipcie_to_sata.png" width="414" height="349"></p>
 <p>The most straightforward solution, with fewer added features, is the NFS plugin. With this option, you will only need a single disk attached to the onboard SATA connector, and we will designate Node3 as the NFS server. Although this option is easy to set up, it also has a single point of failure.</p>
 <h3>Networking</h3>

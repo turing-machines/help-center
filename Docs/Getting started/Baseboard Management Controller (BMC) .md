@@ -8,7 +8,7 @@
 <li>ARM Cortex-A7 Dual-Core</li>
 <li>128MB DDR3</li>
 <li>1GB NAND Flash Memory (MX35LF1GE4AB)</li>
-<li>SD Card slot</li>
+<li>microSD Card slot</li>
 </ul>
 <p>And since BMC is integrated with most of the features of the board, it gives <strong>us </strong>and <strong>you</strong> an excellent platform for automatization, monitoring and management without need of diving in to very low level programming.</p>
 <h1>Open Source</h1>
@@ -161,19 +161,19 @@
 <h1>BMC Linux OS</h1>
 <div class="flex flex-grow flex-col gap-3">
 <div class="min-h-[20px] flex flex-col items-start gap-4 whitespace-pre-wrap">
-<div class="markdown prose w-full break-words dark:prose-invert light">The Turing Pi V2 board uses a Builroot-compiled Linux OS that offers basic tools, similar if not identical to other Linux distributions. However, it does not have a package system and adding new software generally requires recompiling and re-flashing. The internal eMMC memory should not be used for persistent storage for your scripts or ISO images. Instead, please use the SD card interface. The Advanced section will have a separate guide for building and modifying the BMC Linux OS.</div>
+<div class="markdown prose w-full break-words dark:prose-invert light">The Turing Pi V2 board uses a Builroot-compiled Linux OS that offers basic tools, similar if not identical to other Linux distributions. However, it does not have a package system and adding new software generally requires recompiling and re-flashing. The internal eMMC memory should not be used for persistent storage for your scripts or ISO images. Instead, please use the microSD card interface. The Advanced section will have a separate guide for building and modifying the BMC Linux OS.</div>
 <div class="markdown prose w-full break-words dark:prose-invert light">
 <br>
-<h1>BMC SD Card</h1>
-<p>On the back of the Turing Pi V2 board is an SD card slot, this slot is connected to BMC and BMC will attempt to mount it up during its boot process. You can use it as storage for ISO images, custom scripts or programs.</p>
-<p>The supported filesystem for SD cards is:</p>
+<h1>BMC microSD Card</h1>
+<p>On the back of the Turing Pi V2 board is an microSD card slot, this slot is connected to BMC and BMC will attempt to mount it up during its boot process. You can use it as storage for ISO images, custom scripts or programs.</p>
+<p>The supported filesystem for microSD cards is:</p>
 <ul>
 <li>Ext2/3 Linux</li>
 <li>NTFS (Make sure you eject the card from Windows, or the BMC Linux will complain and mount it read only )</li>
 <li>exFAT (recommended for Windows)</li>
 <li>FAT32 (not recommended)</li>
 </ul>
-<p><strong>SD card is automatically mounted to /mnt/sdcard</strong></p>
+<p><strong>microSD card is automatically mounted to /mnt/sdcard</strong></p>
 </div>
 <h1 class="markdown prose w-full break-words dark:prose-invert light">How to update BMC</h1>
 </div>

@@ -1,9 +1,9 @@
 <h1>Raspberry Pi + CM4 Adapter</h1>
-<p>Raspberry Pi Compute Modules come in various flavors, and some do not have eMMC storage at all, relying on SD cards. Some have up to 32GB eMMC directly on board.</p>
+<p>Raspberry Pi Compute Modules come in various flavors, and some do not have eMMC storage at all, relying on microSD cards. Some have up to 32GB eMMC directly on board.</p>
 <p>For both types of storage, we are going to use a fantastic tool called: <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer"><strong>Raspberry Pi Imager.</strong></a> This software works on Windows/macOS/Linux. Download it and install it on your PC.</p>
 <p>Raspberry Pi Imager allows you to download, customize and copy most OS versions you might like to your RPI Compute Module.</p>
-<p><strong>Note: Do not use either SD card and eMMC during installation, remove the SD card temporarily when installing to eMMC.</strong></p>
-<p>With the SD card, you have two options, either use the SD card reader and flash the OS on your PC. Or you can use the same method to access the SD card as we are going to describe for installing it on eMMC.</p>
+<p><strong>Note: Do not use either microSD card and eMMC during installation, remove the microSD card temporarily when installing to eMMC.</strong></p>
+<p>With the microSD card, you have two options, either use the microSD card reader and flash the OS on your PC. Or you can use the same method to access the microSD card as we are going to describe for installing it on eMMC.</p>
 <p>If you have chosen the second method, you will need a USB cable. You need to connect USB 2.0 on Turing Pi V2 (it's the vertical one, next to HDMI) to your PC.</p>
 <p class="wysiwyg-text-align-center"><img src="https://help.turingpi.com/hc/article_attachments/8886281919389" alt="cm4_usb.png" width="496" height="370"></p>
 <p><strong>Ideally</strong>, you will need USB A-A (or also called USB M/M) that looks like this on both sides:</p>
@@ -29,9 +29,9 @@
 <pre>tpi -u device -n 1</pre>
 <p><strong>-n 1 to 4</strong> represents your Node1-4 slots.</p>
 <p>On your PC side, you should see rpiboot detecting the Compute Module storage and presenting it to you as a new disk.</p>
-<p>Here is an example with a brand new SD card:</p>
+<p>Here is an example with a brand new microSD card:</p>
 <pre>C:\Program Files (x86)\Raspberry Pi&gt;rpiboot -d .\msd<br>RPIBOOT: build-date Dec 16 2022 version 20221215~105525 1afa26c5<br>Loading: .\msd/bootcode.bin<br>Loading: .\msd/bootcode4.bin<br>Waiting for BCM2835/6/7/2711...<br>Loading: .\msd/bootcode4.bin<br>Loading: .\msd/bootcode4.bin<br>Sending bootcode.bin<br>Successful read 4 bytes<br>Waiting for BCM2835/6/7/2711...<br>Loading: .\msd/bootcode4.bin<br>Second stage boot server<br>Cannot open file config.txt<br>Cannot open file pieeprom.sig<br>Loading: .\msd/start4.elf<br>File read: start4.elf<br>Cannot open file fixup4.dat<br>Second stage boot server done</pre>
-<p>And in disk manager I can see the new disk (this one is already partitioned as the new SD card tents to be)</p>
+<p>And in disk manager I can see the new disk (this one is already partitioned as the new microSD card tents to be)</p>
 <p><img src="https://help.turingpi.com/hc/article_attachments/8886937773085" alt="sd_disk_in_win.png"></p>
 <h2>Raspberry Pi Imager</h2>
 <p>You can now freely use <a href="https://www.raspberrypi.com/software/" target="_blank" rel="noopener noreferrer"><strong>the Raspberry Pi Imager</strong></a> to flash the OS you want to your Compute Module.</p>

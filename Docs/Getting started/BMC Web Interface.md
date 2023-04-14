@@ -11,8 +11,8 @@
 <h3>Nodeinfo</h3>
 <p>Display basic information about the inserted module. It is taking this information from the serial console. If there is no OS on the Compute Module at the moment it will be reported as unknown.</p>
 <p><img src="https://help.turingpi.com/hc/article_attachments/8859876370973" alt="web_nodeinfo.png"></p>
-<h3>SD Card</h3>
-<p>Currently, provide information about SD card dedicated to BMC.</p>
+<h3>microSD Card</h3>
+<p>Currently, provide information about microSD card dedicated to BMC.</p>
 <p><img src="https://help.turingpi.com/hc/article_attachments/8859900884125" alt="web_sd.png"></p>
 <h3>Other</h3>
 <p>Allows for network reset RTL</p>
