@@ -47,7 +47,7 @@
 <div class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-eqz5dr r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010" data-key="1d11a286f80e4c8b82bd3c54ae1f5895">
 <ul>
 <li class="css-1rynq56 r-gg6oyi r-ubezar r-16dba41 r-135wba7 r-1nf4jbm r-fdjqy7 r-1xnzce8" dir="auto"><span data-key="b5f9d03f7f3e40ee988de0e9b28d4a1b">Flash mode - flash RPi compute modules using the Turing Pi board</span></li>
-<li class="css-1rynq56 r-gg6oyi r-ubezar r-16dba41 r-135wba7 r-1nf4jbm r-fdjqy7 r-1xnzce8" dir="auto">Boot mode - boot OS through eMMC or SD card or netboot</li>
+<li class="css-1rynq56 r-gg6oyi r-ubezar r-16dba41 r-135wba7 r-1nf4jbm r-fdjqy7 r-1xnzce8" dir="auto">Boot mode - boot OS through eMMC or microSD card or netboot</li>
 </ul>
 </div>
 </div>
@@ -76,7 +76,7 @@
 <div class="css-175oi2r">
 <div class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-eqz5dr r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010 r-1yzf0co r-95jzfe r-1l7z4oj" data-key="ed6b9cc0d0274e779b0739dc0736ecfe">
 <div class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-eqz5dr r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010 r-1ro0kt6 r-16y2uox r-1wbh5a2" data-block-content="ed6b9cc0d0274e779b0739dc0736ecfe">
-<pre><span data-key="5f70e3c5bae14e3e8821a174a8442971">Please note you can use either eMMC or SD card storage. You can't use both options. </span></pre>
+<pre><span data-key="5f70e3c5bae14e3e8821a174a8442971">Please note you can use either eMMC or microSD card storage. You can't use both options. </span></pre>
 </div>
 </div>
 </div>

@@ -50,7 +50,7 @@
 <li>
 <strong><span class="wysiwyg-font-size-large"><span class="a-list-item">4x M.2 Slot</span></span></strong><span class="wysiwyg-font-size-large"><span class="a-list-item"> - Full length M.2 slot for disks<span class="wysiwyg-color-red">*</span><br></span></span>
 </li>
-<li><span class="wysiwyg-font-size-large"><span class="a-list-item"><strong>SD Card slot</strong> - Additional storage for custom scripts/tools. available for BMC Operating System<br></span></span></li>
+<li><span class="wysiwyg-font-size-large"><span class="a-list-item"><strong>microSD Card slot</strong> - Additional storage for custom scripts/tools. available for BMC Operating System<br></span></span></li>
 </ul>
 <p><span class="wysiwyg-font-size-medium"><span class="a-list-item"><em><span class="wysiwyg-color-red90">*</span> M.2 slots are available only to SBC modules that have more than one PCIe lane, this currently does not include any Raspberry Pi Compute modules. For now, it is only supported by Nvidia Jetson and the upcoming Turing RK1.<br></em></span></span></p>
 <p> </p>
@@ -232,7 +232,7 @@
 <li>ARM Cortex-A7 Dual-Core</li>
 <li>128MB DDR3</li>
 <li>1GB NAND Flash Memory (MX35LF1GE4AB)</li>
-<li>SD Card slot</li>
+<li>microSD Card slot</li>
 </ul>
 </li>
 <li>

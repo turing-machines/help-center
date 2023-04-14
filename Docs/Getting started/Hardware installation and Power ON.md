@@ -10,8 +10,8 @@
 <p class="wysiwyg-indent2"><strong>It's possible to mount the Raspberry Pi Compute Module at the wrong orientation. On the Adapter board there is an outline and the RPI module should fit into it correctly.</strong></p>
 <p class="wysiwyg-indent2"><strong><img src="https://help.turingpi.com/hc/article_attachments/8895200388765" alt="cm4_wrong_mount.png"><img src="https://help.turingpi.com/hc/article_attachments/8895211212189" alt="cm4_correct_mount.png"></strong></p>
 <h2> </h2>
-<h2>SD Card (CM4 Adapter)</h2>
-<p>Before you insert Compute Modules, you can also install SD card, although the card is easily accessible from the side even when the modules are inserted. You can install OS on the SD card at this point, however we are going to use BMC to flash the SD cards later on.</p>
+<h2>microSD Card (CM4 Adapter)</h2>
+<p>Before you insert Compute Modules, you can also install microSD card, although the card is easily accessible from the side even when the modules are inserted. You can install OS on the microSD card at this point, however we are going to use BMC to flash the microSD cards later on.</p>
 <p class="wysiwyg-text-align-center"><img src="https://help.turingpi.com/hc/article_attachments/8807278435613" alt="cms_sd_card.png"></p>
 <p> </p>
 <h2>Installing Modules</h2>

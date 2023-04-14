@@ -54,7 +54,7 @@
 <li>
 <strong>Data protection</strong>: Longhorn provides data protection through snapshots and backups, ensuring data is not lost in the event of a disaster.</li>
 </ul>
-<p>Longhorn is designed to use the underlying operating system's file system, rather than RAW devices. In a Kubernetes environment, Longhorn uses a designated /&lt;directory&gt; mount point on each node. The exact nature of the storage used at that mount point can vary. It can be the internal storage or an SD card, or it can be a separate SATA disk that has been mounted at that location, which is the recommended setup. Longhorn is agnostic to the specific storage technology.</p>
+<p>Longhorn is designed to use the underlying operating system's file system, rather than RAW devices. In a Kubernetes environment, Longhorn uses a designated /&lt;directory&gt; mount point on each node. The exact nature of the storage used at that mount point can vary. It can be the internal storage or an microSD card, or it can be a separate SATA disk that has been mounted at that location, which is the recommended setup. Longhorn is agnostic to the specific storage technology.</p>
 <h2>Prepare</h2>
 <p><strong>On each node, install the following:</strong></p>
 <pre>apt -y install nfs-common open-iscsi util-linux</pre>
@@ -68,7 +68,7 @@
 <p>Check if StorageClass is present</p>
 <pre>root@cube01:~# kubectl get storageclass<br>NAME     PROVISIONER        RECLAIMPOLICY VOLUMEBINDINGMODE ALLOWVOLUMEEXPANSION AGE<br>longhorn driver.longhorn.io Delete        Immediate         true                 16m</pre>
 <h2>Configure</h2>
-<p>Currently Longhorn is using /storage on every node, unless you are using SD card or internal storage, you might want to limit this to only Node1 to 3 which can have SSDs attached. Easyest way to do it is via web GUI. If you setup MetalLB and used <strong>Option 2</strong> install you can go<strong> <a href="http://10.0.0.71">http://10.0.0.71</a> </strong>and get the Longhorn GUI. If you have choosent <strong>Option 1</strong>, you can export the service to localhost with command:</p>
+<p>Currently Longhorn is using /storage on every node, unless you are using microSD card or internal storage, you might want to limit this to only Node1 to 3 which can have SSDs attached. Easyest way to do it is via web GUI. If you setup MetalLB and used <strong>Option 2</strong> install you can go<strong> <a href="http://10.0.0.71">http://10.0.0.71</a> </strong>and get the Longhorn GUI. If you have choosent <strong>Option 1</strong>, you can export the service to localhost with command:</p>
 <pre>kubectl --namespace longhorn-system port-forward service/longhorn-frontend 9090:80</pre>
 <p>And you should be able to get the sam GUI on http://127.0.0.1/#/dashboard</p>
 <p><strong>Switch to Node tab, click on Operations and choose Edit node and add disks.</strong></p>

@@ -41,7 +41,7 @@
 <div class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-eqz5dr r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010 r-1yzf0co r-95jzfe r-1l7z4oj" data-key="9414b7e1dc4d4ffa86a4efe7c9b3cf8e">
 <div class="r-1oszu61 r-1phboty r-1yadl64 r-deolkf r-6koalj r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-417010 r-1ro0kt6 r-16y2uox r-1wbh5a2 r-1vckr1u r-119zq30 r-z2wwpe r-11g3r6m r-bnwqim r-13qz1uu r-18u37iz" data-block-content="9414b7e1dc4d4ffa86a4efe7c9b3cf8e">
 <div class="css-175oi2r r-rwqe4o r-18u37iz r-1777fci"> </div>
-<div class="css-175oi2r r-rwqe4o r-18u37iz r-1777fci"><span data-key="30224b817bd54a78af0c7f52f0ab0842">⚠️ Please note, you can use either eMMC or SD card storage. You can't use both options.</span></div>
+<div class="css-175oi2r r-rwqe4o r-18u37iz r-1777fci"><span data-key="30224b817bd54a78af0c7f52f0ab0842">⚠️ Please note, you can use either eMMC or microSD card storage. You can't use both options.</span></div>
 <div class="css-175oi2r r-1ro0kt6 r-16y2uox r-1wbh5a2">
 <div class="css-175oi2r r-bnwqim">
 <div class="css-175oi2r">

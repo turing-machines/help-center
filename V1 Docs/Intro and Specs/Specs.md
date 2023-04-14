@@ -257,7 +257,7 @@
 <div class="css-175oi2r r-1ro0kt6 r-16y2uox r-1wbh5a2">
 <div data-key="63ac48caf2c247b2b6984ccd0619bbc9" data-fragment="true" data-slate-editor="true" data-document-key="0bf4ed7be81547dd85c047739fb7a26d">
 <div class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-eqz5dr r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010" data-key="8727a60acc594fd883b3c7eb83cd6453">
-<div class="css-1rynq56 r-gg6oyi r-ubezar r-16dba41 r-135wba7 r-1nf4jbm r-fdjqy7 r-1xnzce8" dir="auto"><span data-key="ed4cc0086c6a40a6af977339b4a59815">Boot from SD</span></div>
+<div class="css-1rynq56 r-gg6oyi r-ubezar r-16dba41 r-135wba7 r-1nf4jbm r-fdjqy7 r-1xnzce8" dir="auto"><span data-key="ed4cc0086c6a40a6af977339b4a59815">Boot from microSD</span></div>
 </div>
 </div>
 </div>
@@ -305,7 +305,7 @@
 <div class="css-175oi2r r-1ro0kt6 r-16y2uox r-1wbh5a2">
 <div data-key="28b3235e53d04505b3b86d5685dda0ab" data-fragment="true" data-slate-editor="true" data-document-key="0bf4ed7be81547dd85c047739fb7a26d">
 <div class="r-1oszu61 r-1xc7w19 r-1phboty r-1yadl64 r-deolkf r-6koalj r-1mlwlqe r-eqz5dr r-1q142lx r-crgep1 r-ifefl9 r-bcqeeo r-t60dpp r-bnwqim r-417010" data-key="da73c487e7a34c19aed4891bb3a37864">
-<div class="css-1rynq56 r-gg6oyi r-ubezar r-16dba41 r-135wba7 r-1nf4jbm r-fdjqy7 r-1xnzce8" dir="auto"><span data-key="2ff7bbd1666d4125a596a30a724b6377">Micro SD slots, QTY</span></div>
+<div class="css-1rynq56 r-gg6oyi r-ubezar r-16dba41 r-135wba7 r-1nf4jbm r-fdjqy7 r-1xnzce8" dir="auto"><span data-key="2ff7bbd1666d4125a596a30a724b6377">Micro microSD slots, QTY</span></div>
 </div>
 </div>
 </div>
