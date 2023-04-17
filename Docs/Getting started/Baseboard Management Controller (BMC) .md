@@ -185,6 +185,7 @@
 <p>You can enter the IP of the BMC into the browser of your choice, and you should be welcomed by the web interface. You can then switch to update, select update file and submit.</p>
 <p><img src="https://help.turingpi.com/hc/article_attachments/8848581719453" alt="ota-update.png"></p>
 <p><strong>You will be able to find updates and releases on our</strong><a href="https://github.com/wenyi0421/turing-pi/releases" target="_blank" rel="noopener noreferrer"><strong> GitHub repository</strong></a>, <span class="wysiwyg-color-red"><strong>OTA files ends with </strong></span><span class="wysiwyg-color-green110"><strong>.</strong></span><span class="wysiwyg-color-green120"><strong>swu</strong></span><span class="wysiwyg-color-red"><strong> extension.</strong></span></p>
+<p>Your file will be uploaded to the BMC after submitting, which currently results in a plain JSON response. The update however will be handled by the BMC and the board will eventually reboot. <strong>Do not reboot on your own</strong>, this may cause a partly updated board.</p>
 <h2>The second option is Flashing IMG file.</h2>
 <p>It could happen that you forgot your root password or you were experimenting with custom builds and it came to a situation where you can't use OTA update method.</p>
 <p><span class="wysiwyg-color-red"><strong>Note that this part is temporary and we are working on our custom flash method.</strong></span></p>
