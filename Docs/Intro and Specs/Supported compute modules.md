@@ -157,4 +157,18 @@
 <p>If you choose to purchase the module without the built-in eMMC, the SD card on the CM4 adapter board can be utilized, and the operating system can be booted from it. However, if you opt for the version with the eMMC extension, you will need to use the USB eMMC adapter tool provided by Pine64 to flash the operating system onto the module.</p>
 <p class="wysiwyg-text-align-center"><img src="https://help.turingpi.com/hc/article_attachments/9170063145629" alt="pine64_3.png"></p>
 <p class="wysiwyg-text-align-center"><img src="https://help.turingpi.com/hc/article_attachments/9169990889885" alt="pine64.png"></p>
+<h2>BigTree-Tech CB1 Compute Module</h2>
+<p class="wysiwyg-text-align-center"><img src="https://cdn.shopify.com/s/files/1/1619/4791/products/5_b06e0a40-0912-4ded-8a0e-4831c6c860a8_600x.jpg?v=1670830487" alt="bigtreetech-cb1.png"></p>
+<p>The BigTree-Tech CB1 Compute module is a CM4 form factor compute module. Details of its specs can be found in the <a href="https://github.com/bigtreetech/CB1/blob/master/BIGTREETECH%20CB1%20User%20Manual.pdf" target="_new">product manual</a>. In short though the CB1
+is a quad core, A53 SOC with either 512MB or 1GB of ram. They are primarily marketed to 3d printer enthusiasts.</p>
+<p>Three 1GB CB1 modules were paired with a Raspberry Pi CM4 with 4GB of ram. A CB1 is unlikely to support a control plane
+node for k3s or microk8s by itself, thus the CM4 will serve as the control plane. The CB1 modules had
+<a href="https://github.com/bigtreetech/CB1/releases/tag/V2.3.2" target="_new">CB1_Debian_11_minimal from the BigTree-Tech Github</a>
+installed via a 32GB SD Card. The CM4 ran <a href="https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2023-02-22/2023-02-21-raspios-bullseye-arm64.img.xz" target="_new">2023-02-21-raspio-bullseye-arm64</a>.</p>
+<p>The same configuration of microk8s and k3s were deployed via Ansible to all nodes. Logs for the test are available
+<a href="https://raw.githubusercontent.com/nuvious/HomelabKubernetes/003-Armbian-Support/docs/20230421-Test.log" target="_new">here</a>
+(hostnames tpi21, tpi22, and tpi23 were CB1 modules) and the ansible playbooks used are available
+<a href="https://github.com/nuvious/HomelabKubernetes/tree/8c7ba8be7b09c037c4bdb29f511ef858dce9f9c6">here at the linked commit</a>.
+If used in a kubernetes implementation, k3s will offer less overhead than microk8s which should be considered given the limited
+resources of a CB1 modules. All that said, it has been tested and works on the Turing Pi 2.</p> 
 <p> </p>
