@@ -164,13 +164,14 @@ but functions as a general purpose CM4 form factor compute module. Details of it
 <a href="https://github.com/bigtreetech/CB1/blob/master/BIGTREETECH%20CB1%20User%20Manual.pdf" target="_new">product manual on their github</a>.
 In short, the CB1 is a quad core, A53 SOC with either 512MB or 1GB of ram.</p>
 <p>In testing, three 1GB CB1 modules were paired with a Raspberry Pi CM4 with 4GB of ram. A CB1 is unlikely to support
-a control plane node for k3s or microk8s by itself, thus the CM4 will serve as the control plane. The CB1 modules had
+a control plane node for k3s or microk8s by itself, thus the CM4 served as the control plane. The CB1 modules had
 <a href="https://github.com/bigtreetech/CB1/releases/tag/V2.3.2" target="_new">CB1_Debian_11_minimal from the BigTree-Tech Github</a>
-installed via a 32GB SD Card. The CM4 ran <a href="https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2023-02-22/2023-02-21-raspios-bullseye-arm64.img.xz" target="_new">2023-02-21-raspio-bullseye-arm64</a>.</p>
-<p>The same configuration of microk8s and k3s were deployed via Ansible to all nodes. Logs for the test are available
+installed via a 32GB microSD card. The CM4 ran <a href="https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2023-02-22/2023-02-21-raspios-bullseye-arm64.img.xz" target="_new">2023-02-21-raspio-bullseye-arm64</a>.</p>
+<p>The same configuration of microk8s and k3s were deployed via Ansible to all nodes with no special configuration required
+on the Turing Pi 2 itself. Logs for the test are available
 <a href="https://raw.githubusercontent.com/nuvious/HomelabKubernetes/003-Armbian-Support/docs/20230421-Test.log" target="_new">here</a>
 (hostnames tpi21, tpi22, and tpi23 were CB1 modules) and the ansible playbooks used are available
 <a href="https://github.com/nuvious/HomelabKubernetes/tree/8c7ba8be7b09c037c4bdb29f511ef858dce9f9c6">here at the linked commit</a>.
 If used in a kubernetes implementation, k3s will offer less overhead than microk8s which should be considered given the limited
-resources of a CB1 modules. All that said, it has been tested and works on the Turing Pi 2.</p> 
+resources of a CB1 modules. All that said, the BigTree-Tech CB1 compute module has been tested and works on the Turing Pi 2.</p> 
 <p> </p>
