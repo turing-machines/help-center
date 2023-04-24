@@ -159,10 +159,11 @@
 <p class="wysiwyg-text-align-center"><img src="https://help.turingpi.com/hc/article_attachments/9169990889885" alt="pine64.png"></p>
 <h2>BigTree-Tech CB1 Compute Module</h2>
 <p class="wysiwyg-text-align-center"><img src="https://cdn.shopify.com/s/files/1/1619/4791/products/5_b06e0a40-0912-4ded-8a0e-4831c6c860a8_600x.jpg?v=1670830487" alt="bigtreetech-cb1.png"></p>
-<p>The BigTree-Tech CB1 Compute module is a CM4 form factor compute module. Details of its specs can be found in the <a href="https://github.com/bigtreetech/CB1/blob/master/BIGTREETECH%20CB1%20User%20Manual.pdf" target="_new">product manual</a>. In short though the CB1
-is a quad core, A53 SOC with either 512MB or 1GB of ram. They are primarily marketed to 3d printer enthusiasts.</p>
-<p>Three 1GB CB1 modules were paired with a Raspberry Pi CM4 with 4GB of ram. A CB1 is unlikely to support a control plane
-node for k3s or microk8s by itself, thus the CM4 will serve as the control plane. The CB1 modules had
+<p>The BigTree-Tech CB1 compute module was designed and marketed for 3D Printer control board applications
+but functions as a general purpose CM4 compute module. Details of its specs can be found in the <a href="https://github.com/bigtreetech/CB1/blob/master/BIGTREETECH%20CB1%20User%20Manual.pdf" target="_new">product manual on their github</a>. In short though the CB1
+is a quad core, A53 SOC with either 512MB or 1GB of ram.</p>
+<p>In testing, three 1GB CB1 modules were paired with a Raspberry Pi CM4 with 4GB of ram. A CB1 is unlikely to support
+a control plane node for k3s or microk8s by itself, thus the CM4 will serve as the control plane. The CB1 modules had
 <a href="https://github.com/bigtreetech/CB1/releases/tag/V2.3.2" target="_new">CB1_Debian_11_minimal from the BigTree-Tech Github</a>
 installed via a 32GB SD Card. The CM4 ran <a href="https://downloads.raspberrypi.org/raspios_arm64/images/raspios_arm64-2023-02-22/2023-02-21-raspios-bullseye-arm64.img.xz" target="_new">2023-02-21-raspio-bullseye-arm64</a>.</p>
 <p>The same configuration of microk8s and k3s were deployed via Ansible to all nodes. Logs for the test are available
