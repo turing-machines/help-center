@@ -161,7 +161,7 @@
 <h1>BMC Linux OS</h1>
 <div class="flex flex-grow flex-col gap-3">
 <div class="min-h-[20px] flex flex-col items-start gap-4 whitespace-pre-wrap">
-<div class="markdown prose w-full break-words dark:prose-invert light">The Turing Pi V2 board uses a Builroot-compiled Linux OS that offers basic tools, similar if not identical to other Linux distributions. However, it does not have a package system and adding new software generally requires recompiling and re-flashing. The internal eMMC memory should not be used for persistent storage for your scripts or ISO images. Instead, please use the SD card interface. The Advanced section will have a separate guide for building and modifying the BMC Linux OS.</div>
+<div class="markdown prose w-full break-words dark:prose-invert light">The Turing Pi V2 board uses a Buildroot-compiled Linux OS that offers basic tools, similar if not identical to other Linux distributions. However, it does not have a package system and adding new software generally requires recompiling and re-flashing. The internal eMMC memory should not be used for persistent storage for your scripts or ISO images. Instead, please use the SD card interface. The Advanced section will have a separate guide for building and modifying the BMC Linux OS.</div>
 <div class="markdown prose w-full break-words dark:prose-invert light">
 <br>
 <h1>BMC SD Card</h1>
