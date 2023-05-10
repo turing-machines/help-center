@@ -147,6 +147,7 @@
 </ul>
 <h2><span class="wysiwyg-color-black"><strong>Raspberry Pi Compute Module Adapter Board</strong></span></h2>
 <p class="wysiwyg-text-align-center"><span class="wysiwyg-color-orange"><strong><img src="https://help.turingpi.com/hc/article_attachments/8895108042909" alt="CM4_Adapterboard_back.png"><img src="https://help.turingpi.com/hc/article_attachments/8895097120413" alt="CM4_Adapterboard_front.png"></strong></span></p>
+<p>Please note, though the adapter board has an SD card slot, this will only be useable with Raspberry Pi CM4 boards that <em do not</em> include eMMC. (Devices with eMMC use the data lane that would provide access to the SD card for access to the eMMC).</p>
 <h2><span class="wysiwyg-color-black"><strong>Nvidia Jetson Compute Module<br></strong></span></h2>
 <p class="wysiwyg-text-align-center"><span class="wysiwyg-color-orange"><strong><img src="https://help.turingpi.com/hc/article_attachments/8764529891485" alt="nvidia_jetson.png"></strong></span></p>
 <p class="wysiwyg-text-align-center"> </p>
