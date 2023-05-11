@@ -153,6 +153,7 @@
 <p>This will assign a MAC address: 12:34:56:78:9A:BC to the interface. You can easily generate random MAC address for example with this one line script:</p>
 <pre>printf '%02x:%02x:%02x:%02x:%02x:%02x\n' $((0x02)) $((RANDOM%256)) $((RANDOM%256)) $((RANDOM%256)) $((RANDOM%256)) $((RANDOM%256))</pre>
 <p><span class="wysiwyg-color-red">But you need to make sure that the assigned MAC is not already used by any device on the network. </span></p>
+<p><span class="wysiwyg-color-red">Ensure the assigned MAC's first byte is even to be unicast. E.g. so the MAC starts with x2- x6- xA- or xE-xx-xx-xx-xx-xx .</span></p>
 <h1>Set HW clock</h1>
 <p>At the time of writing, there is no ntp client installed in BMC. However, you can quickly set up the clock and HW clock with the following one-liner. Just replace the "Europe/Bratislava" for your location.</p>
 <pre>date -s @"$(curl -s "http://worldtimeapi.org/api/timezone/Europe/Bratislava" | \<br>sed -n 's/.*"unixtime":\([0-9]*\).*/\1/p')"<br>hwclock --systohc</pre>
