@@ -89,5 +89,5 @@
 <p><img src="https://help.turingpi.com/hc/article_attachments/9072471290781" alt="longhorn_ui_4.png"></p>
 <h3><span class="wysiwyg-color-black">Cleanup</span></h3>
 <p>Delete the PVC with:</p>
-<pre>kubectl delete -f pvc_test.yam</pre>
+<pre>kubectl delete -f pvc_test.yaml</pre>
 <p><span class="wysiwyg-color-green120"><strong>W</strong><strong>e can now assume the test was successful and this StorageClass can be used across our cluster.</strong></span></p>
