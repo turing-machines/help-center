@@ -23,7 +23,7 @@
 </ul>
 <h2>service.yaml</h2>
 <p>In this file, we will define Kubernetes service, telling our cluster how to access the container from deployment.yaml</p>
-<pre>apiVersion: v1<br>kind: Service<br>metadata:<br>  name: redis-server<br>  namespace: redis-server<br>spec:<br>  selector:<br>    app: redis-server<br>  type: LoadBalancer<br>  ports:<br>    - name: redis-port<br>      protocol: TCP<br>      port: 6379<br>      targetPort: 6379<br>      loadBalancerIP: 10.0.0.73</pre>
+<pre>apiVersion: v1<br>kind: Service<br>metadata:<br>  name: redis-server<br>  namespace: redis-server<br>spec:<br>  selector:<br>    app: redis-server<br>  type: LoadBalancer<br>  ports:<br>    - name: redis-port<br>      protocol: TCP<br>      port: 6379<br>      targetPort: 6379<br>status:<br>  loadBalancer:<br>    ingress:<br>    - ip: 10.0.0.73</pre>
 <p>Here is important to node <strong>selector </strong>which basically looks for container with app=redis-server, and we have defined that in deployment.yaml under <strong>template.</strong> Next important is the <strong>loadBalancerIP, </strong>here you can specify IP from MetalLB range.</p>
 <h1>Deploy</h1>
 <p>You can deploy all the files at once by just providing a folder for kubect deploy command, but we will do it in logical order for educational purposes.</p>
