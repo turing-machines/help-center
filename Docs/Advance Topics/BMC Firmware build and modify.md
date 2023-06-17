@@ -2,7 +2,7 @@
 <p> </p>
 <p>In this guide, we are going to look how can you build and modify the BMC firmware. Mind you, since the firmware is still in active development, this is subject to change. We will try to keep this guide updated as much as possible.</p>
 <h2>Where do I get the BMC firmware ?</h2>
-<p>You can find the BMC and $tpi on our <a href="https://github.com/wenyi0421/turing-pi" target="_blank" rel="noopener"><strong>GitHub repo</strong></a>.</p>
+<p>You can find the BMC and $tpi on our <a href="https://github.com/turing-machines/BMC-Firmware" target="_blank" rel="noopener"><strong>GitHub repo</strong></a>.</p>
 <p>Some important folders:</p>
 <ul>
 <li>
